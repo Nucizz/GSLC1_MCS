@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:src="@drawable/logo_white"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_white" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:paddingHorizontal="20dp"
+        android:background="@drawable/bottom_mounted_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sfpro_bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:text="Welcome!" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfpro_regular"
+            android:textColor="@color/dark"
+            android:textSize="20dp"
+            android:text="Login to start exploring." />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailFormField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form_field"
+            android:textSize="20dp"
+            android:paddingHorizontal="15dp"
+            android:fontFamily="@font/sfpro_regular"
+            android:gravity="center_vertical"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordFormField"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/form_field"
+            android:textSize="20dp"
+            android:paddingHorizontal="15dp"
+            android:fontFamily="@font/sfpro_regular"
+            android:gravity="center_vertical"
+            android:hint="Password"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"
+            android:fontFamily="@font/sfpro_bold"
+            android:textSize="20dp"
+            android:background="@drawable/form_field"
+            app:backgroundTint="@color/accent_dark"
+            android:backgroundTint="@color/accent_dark"
+        />
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/registerHintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account? "
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:id="@+id/registerPageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@color/accent_dark"
+                android:clickable="true"
+                android:onClick="toRegisterActivity"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
